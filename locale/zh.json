@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "GitHub Repo Search",
+    "description": "为 Agent 注册 search_github_repos 工具，直接调用 GitHub Search API 搜索仓库，带五分钟内存缓存与速率限制保护。"
+  }
+}

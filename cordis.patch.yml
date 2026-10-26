@@ -1,0 +1,8 @@
+# github-repo-search bundle patch.
+#
+# 一行 insert 即可把 Host 半身挂进当前 profile；本插件是纯工具插件，
+# package.json 里没有 dsh.client，因此不会向浏览器注入任何代码。
+- insert:
+    - id: github-repo-search
+      name: 'github-repo-search'
+      config: {}

@@ -1,0 +1,56 @@
+{
+  "name": "github-repo-search",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "GitHub repository search for the Agent: registers the search_github_repos tool over the GitHub Search API, with a five-minute in-memory cache and rate-limit protection. · 让 Agent 能搜索 GitHub 仓库的工具插件。",
+  "main": "./lib/index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "github",
+    "search",
+    "tool"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test --test-isolation=none test/github.test.mjs",
+    "check": "npm run typecheck && npm run build && npm run test"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.4",
+    "@deepseek-ai/dsh-tools": "^0.1.7-rc.2"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.4",
+    "@deepseek-ai/dsh-tools": "0.1.7-rc.2",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3"
+  },
+  "license": "MIT"
+}

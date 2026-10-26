@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "GitHub Repo Search",
+    "description": "Registers the search_github_repos tool so the Agent can query the GitHub Search API, with a five-minute in-memory cache and rate-limit protection."
+  }
+}
